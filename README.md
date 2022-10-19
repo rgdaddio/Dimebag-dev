@@ -20,4 +20,6 @@ Linux userland:<br>
 git clone https://git.busybox.net/busybox <br><br>
   
   <strong>Third:</strong><br>
-  Build the chain
+  Build the chain<br>
+ ./configure --prefix=/opt/riscv <strong><-whatever path you choose this will probably work ootb</strong><br>
+  make linux<br>
