@@ -1,2 +1,2 @@
 # Dimebag-dev
-$10 Riscv Linux DigitalOcean Droplet
+$10 Riscv Linux with DigitalOcean Droplet
