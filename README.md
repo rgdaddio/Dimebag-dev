@@ -17,7 +17,7 @@
   <strong>Second:</strong><br>
   Go get the following:<br>
   Toolchain:<br>
-  git clone https://github.com/riscv/riscv-gnu-toolchain <br>
+  git clone https://github.com/riscv/riscv-gnu-toolchain <br><br>
 
   
    <strong>Third:</strong><br>
@@ -61,7 +61,7 @@
   make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig<br>
   <strong>!!!Check Settings in the menu that pops up - Build busybox with static binary (no shared libs)!!</strong><br>
   make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- install<br>
-  cd ..<br>
+  cd ..<br><br>
    
   <strong>Eighth:</strong><br>
   <strong>Trickiest Step</strong><br>
