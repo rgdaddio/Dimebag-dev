@@ -3,12 +3,12 @@ $10 Riscv Linux with DigitalOcean Droplet
 
 
 
-<u>First:<br> 
+<strong>First:</strong><br> 
 Go to DigitalOcean (https://www.digitalocean.com/) and get a $5.00 Droplet (vm instance) and $5.00 of storage
 -- / 1 GB Memory / 1 Intel vCPU / 25 GB Disk + 50 GB / NYC1 - Ubuntu 22.04 x64<br>
 Log into your fresh new Ubuntu instance.<br><br>
 
-<u>Second:<u><br>
+<strong>Second:</strong><u><br>
 Go get the following:<br>
 Toolchain:<br>
 git clone https://github.com/riscv/riscv-gnu-toolchain <br>
