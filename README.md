@@ -4,7 +4,7 @@
 
 
   <strong>First:</strong><br> 
-  Go to <strong>DigitalOcean</strong> (https://www.digitalocean.com/) and get a $5.00 Droplet (vm instance) and $5.00 of block storage<br><br>
+  Go to <strong>DigitalOcean</strong> (https://www.digitalocean.com/) and get a $5.00 Droplet (vm instance) and $5.00 of block storage (Easy Instructions)<br><br>
   Something like this -> / 1 GB Memory / 1 Intel vCPU / 25 GB Disk + 50 GB / NYC1 - Ubuntu 22.04 x64<br>
   SSH into your fresh new Ubuntu instance.<br><br>
 
