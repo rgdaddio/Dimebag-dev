@@ -15,47 +15,52 @@
 
 
   <strong>Second:</strong><br>
-  Go get the following:<br>
-  Toolchain:<br>
+  
+  Make a directory that looks something like this:<br>
+  mkdir riscv64-linux<br>
+  and<br>
+  cd riscv64-linux<br><br>
+  Get the Riscv Toolchain:<br>
   git clone https://github.com/riscv/riscv-gnu-toolchain <br><br>
 
-  
-   <strong>Third:</strong><br>
-   Build the Toolchain (crosscompiler)<br>
+  Build the Toolchain (crosscompiler)<br>
   ./configure --prefix=/opt/riscv <strong><-whatever path you choose this will probably work ootb</strong><br>
    make linux<br><br>
   
-   <strong>Fourth:</strong><br>
-   Make a directory that looks something like this and move qemu,linux,and busy box there:<br>
-   mkdir riscv64-linux<br>
-   and<br>
-   cd riscv64-linux<br><br>
-   Then get<br>
-   System Emulator:<br>
-   git clone https://github.com/qemu/qemu <br>
-   Linux kernel:<br>
-   git clone https://github.com/torvalds/linux <br>
-   Linux userland:<br>git clone https://git.busybox.net/busybox <br><br>
-  
+  <strong>Third:</strong><br>
    
-    
-   <strong>Fifth:</strong><br>
-   <strong>Note this step uses the local compiler NOT the compiler from tools above</strong><br>
+   Then<br>
+   cd ..<br>
+   mkdir qemu<br>
+   cd qemu<br>
+   Get the System Emulator:<br>
+   git clone https://github.com/qemu/qemu <br>
+
+  <strong>Uses the local compiler to build it NOT the compiler in the ricsv toolchain</strong><br>
    cd qemu<br>
    git checkout v5.0.0<br>
    ./configure --target-list=riscv64-softmmu<br>
    make -j $(nproc)<br>
    make install<br><br>
-
-   <strong>Sixth:</strong><br>
-   cd linux<br>
+   cd..<br>
+  
+  <strong>Fourth:</strong><br>
+ 
+  
+  mkdir linux<br>
+  cd linux<br>
+   Get the Linux kernel:<br> 
+   git clone https://github.com/torvalds/linux <br>
    <strong>Note this step uses the compiler from tools above and it should be in your path e.g. export PATH=/opt/riscv/bin:$PATH </strong><br>
    git checkout v5.4.0<br>
    make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- defconfig<br>
    make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- -j $(nproc)<br><br>
-   
-  <strong>Seventh:</strong><br>
+   cd..<br>
+  
+  <strong>Fifth:</strong><br>
+  mkdir busybox<br>
   cd busybox<br>
+  Get Linux userland:<br>git clone https://git.busybox.net/busybox <br><br>
   git checkout 1_32_0<br>
   make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- defconfig<br>
   make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig<br>
@@ -63,7 +68,7 @@
   make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- install<br>
   cd ..<br><br>
    
-  <strong>Eighth:</strong><br>
+  <strong>Sixth:</strong><br>
   <strong>Trickiest Step</strong><br>
   Create root filesystem image<br>
   mkdir rootfs<br>
@@ -78,6 +83,6 @@
   umount /mnt/rootfs<br>
   cd ..<br>
   
-  <strong>Ninth:</strong><br>
+  <strong>Last:</strong><br>
   Run it!!!<br>
   qemu-system-riscv64 -nographic -machine virt -kernel linux/arch/riscv/boot/Image -append "root=/dev/vda rw console=ttyS0" -drive  file=rootfs/rootfs.img,format=raw,id=hd0 -device virtio-blk-device,drive=hd0 -bios default <br>
