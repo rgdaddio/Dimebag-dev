@@ -9,7 +9,7 @@
   SSH into your fresh new Ubuntu instance.<br><br>
 
   <strong>Prereqs:</strong><br>
-  apt-get install apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo   gperf libtool patchutils bc zlib1g-dev libexpat-dev git<br>
+apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev git<br>
 
 
 
