@@ -87,4 +87,4 @@ apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-
   Run it!!!<br>
   qemu-system-riscv64 -nographic -machine virt -kernel linux/arch/riscv/boot/Image -append "root=/dev/vda rw console=ttyS0" -drive  file=rootfs/rootfs.img,format=raw,id=hd0 -device virtio-blk-device,drive=hd0 -bios default <br><br>
   
-  Add HW extensions? https://www.veripool.org/verilator/ <br>
+  Add HW extensions (Verilog -> c/c++)? https://www.veripool.org/verilator/ <br>
