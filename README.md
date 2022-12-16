@@ -6,7 +6,7 @@
   <strong>First:</strong><br> 
   Go to <strong>DigitalOcean</strong> (https://www.digitalocean.com/) and get a $4.00 Droplet and $5.00 of block storage (Easy Instructions)<br><br>
   Something like this -> / 1 GB Memory / 1 Intel vCPU / 25 GB Disk + 50 GB / NYC1 - Ubuntu 22.04 x64<br>
-  SSH into your fresh new Ubuntu instance.<br><br>
+  <strong>SSH into your fresh new Ubuntu instance. </strong><br><br>
 
   <strong>Prereqs:</strong><br>
 apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev git<br>
