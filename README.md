@@ -16,7 +16,7 @@ apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-
 
   <strong>Second:</strong><br>
   
-  Make a directory that looks something like this:<br>
+  Make a directory that looks something like this and this is where you will build <strong>FROM:</strong><br>
   mkdir riscv64-linux<br>
   and<br>
   cd riscv64-linux<br><br>
@@ -24,7 +24,7 @@ apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-
   git clone https://github.com/riscv/riscv-gnu-toolchain <br><br>
 
   Build the Toolchain (crosscompiler)<br>
-  ./configure --prefix=/opt/riscv <strong><-whatever path you choose this will probably work ootb</strong><br>
+  ./configure --prefix=/opt/riscv <strong><-whatever path you choose this will probably work ootb this is where your binaries will GO</strong><br>
    make linux<br><br>
   
   <strong>Third:</strong><br>
