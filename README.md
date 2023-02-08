@@ -40,7 +40,7 @@ apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-
    cd qemu<br>
    git checkout v5.0.0<br>
    ./configure --target-list=riscv64-softmmu<br>
-   make -j $(nproc)<br>
+   make -j $(nproc) -j CFLAGS=-Wno-array-bounds<br>
    make install<br><br>
    cd..<br>
   
