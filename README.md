@@ -64,7 +64,7 @@ apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-
   git checkout 1_32_0<br>
   make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- defconfig<br>
   make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- menuconfig<br>
-  <strong>!!!Check Settings in the menu that pops up - Build busybox with static binary (no shared libs)!!</strong><br>
+  <strong>!!!Check Settings in the menu that pops up - Build busybox with static binary (no shared libs Under "Settings" in menuconfig) !!</strong><br>
   make ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- install<br>
   cd ..<br><br>
    
